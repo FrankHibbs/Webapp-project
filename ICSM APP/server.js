@@ -132,4 +132,4 @@ createServer(async (req, res) => {
   } catch (error) {
     json(res, error.status || 500, { error: error.message || 'Request failed.' });
   }
-}).listen(port, '127.0.0.1', () => console.log(`Gameplan running at http://localhost:${port}`));
+}).listen(port, '0.0.0.0', () => console.log(`Gameplan running on port ${port}`));
